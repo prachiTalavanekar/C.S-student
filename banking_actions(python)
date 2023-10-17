@@ -1,0 +1,52 @@
+def info():
+  name=str(input("enter a customer name"))
+  acc_no=int(input("enter account number"))
+  mobile_no=int(input("enter mobile number"))
+  print("")
+  print("name:", name)
+ 
+  print("account number is", acc_no)
+
+  print("mobile no. :", mobile_no)
+  print("")
+  
+
+def withdraw():
+  ib=int(input("enter initial balance \n"))
+  w=int(input("enter amount to withdraw \n"))
+  if(w<ib):
+    print("withdrawal is successful")
+    b=ib-w
+    print("remaining balance is ",b)
+  else:
+    print("withdrawal is not possible")
+    
+def deposit():
+  ib=int(input("enter initial balance \n"))
+  d=int(input("enter amount to deposit \n"))
+  b=ib+d;
+  print("balance in your account is", b)
+
+def interest():
+  ib=int(input("enter initial balance \n"))
+  r=int(input("enter interest rate \n"))
+  y=int(input("enter years for interest \n"))
+  i=(ib*r*y)/100;
+  b=i+ib;
+  print("interest is",i)
+  print("balance with interest is", b)
+
+
+info()
+while True:
+  bank=int(input("enter a number :- 1 : withdrawal amount,2 : deposit amount,3 : interest"))
+  print("")
+  if (bank==1):
+    print(withdraw())
+  elif (bank==2):
+    print(deposit())
+  elif (bank==3):
+    print(interest())
+  else:
+    print("exit")
+    break;
